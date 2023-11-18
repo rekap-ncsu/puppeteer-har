@@ -23,7 +23,7 @@ export const captureResponses = (
     if (
       response.status === 204 ||
       response.headers.location != null ||
-      !captureMimeTypes.includes(response.mimeType)
+      !(captureMimeTypes.includes(response.mimeType) || captureMimeTypes.includes("*"))
     ) {
       return
     }
@@ -34,7 +34,7 @@ export const captureResponses = (
       if (params.requestId !== requestId) {
         return
       }
-
+`
       resolve({
         [requestId]: await extractResponseContent(client, requestId),
       })
