@@ -34,7 +34,7 @@ export const captureResponses = (
       if (params.requestId !== requestId) {
         return
       }
-`
+
       resolve({
         [requestId]: await extractResponseContent(client, requestId),
       })
