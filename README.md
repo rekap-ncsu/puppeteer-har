@@ -1,4 +1,10 @@
 # puppeteer-har
+>[!NOTE]
+> # What is this?
+> This is a fork of [fork of the puppeteer-har](https://github.com/auteon/puppeteer-har)
+> That fork fixes a bug in the original package, and changes things to typescript, however does not support saving ALL responses with a wildcard, hence this fork. 
+
+
 
 Generate HAR file with [puppeteer](https://github.com/GoogleChrome/puppeteer).
 
